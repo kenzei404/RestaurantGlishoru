@@ -11,7 +11,7 @@ export function GlishoruHeader({ overlay = false }: { overlay?: boolean }) {
       <a className="gBrand" href="/glishoru" aria-label="Glishoru Startseite"><span>Restaurant</span><strong>Glishoru</strong></a>
       <nav className={menuOpen ? "open" : ""} aria-label="Hauptnavigation">
         <a href="/glishoru/haus">Unser Haus</a>
-        <a className="gMenuPrimary" href="/glishoru/speisekarte">Speisekarte</a>
+        <a href="/glishoru/speisekarte">Speisekarte</a>
         <a href="/glishoru/kontakt">Kontakt</a>
         <a className="gReserve" href={PHONE}>Tisch reservieren</a>
       </nav>
