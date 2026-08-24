@@ -124,6 +124,9 @@ h1 i { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 .gNav nav { display: flex; align-items: center; gap: 34px; font-size: 11px; text-transform: uppercase; letter-spacing: .14em; }
 .gReserve { padding: 14px 19px; border: 1px solid rgba(241,234,219,.7); transition: background .25s ease, color .25s ease; }
 .gReserve:hover { background: var(--cream); color: var(--wine); }
+.gNav .gMenuPrimary { position: relative; color: var(--gold); font-weight: 700; }
+.gNav .gMenuPrimary::after { content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 1px; background: currentColor; transform: scaleX(.38); transform-origin: left; transition: transform .25s ease; }
+.gNav .gMenuPrimary:hover::after { transform: scaleX(1); }
 .gMenuButton { display: none; border: 0; background: none; color: inherit; font: inherit; font-size: 10px; text-transform: uppercase; letter-spacing: .15em; }
 .gHero { position: relative; min-height: 100svh; overflow: hidden; }
 .gHeroImage { position: absolute; inset: 0; background: url('https://www.glishoru.ch/img/saal.jpg') center/cover no-repeat; transform: scale(1.01); }
