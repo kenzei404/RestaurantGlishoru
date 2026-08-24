@@ -1,18 +1,21 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export const PHONE = "tel:+41774947777";
 
 export function GlishoruHeader({ overlay = false }: { overlay?: boolean }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const linkClass = (href: string) => pathname === href ? "gNavActive" : undefined;
   return (
-    <header className={`gNav ${overlay ? "" : "subpageNav"}`}>
+    <header className="gNav" data-overlay={overlay || undefined}>
       <a className="gBrand" href="/glishoru" aria-label="Glishoru Startseite"><span>Restaurant</span><strong>Glishoru</strong></a>
       <nav className={menuOpen ? "open" : ""} aria-label="Hauptnavigation">
-        <a href="/glishoru/haus">Unser Haus</a>
-        <a href="/glishoru/speisekarte">Speisekarte</a>
-        <a href="/glishoru/kontakt">Kontakt</a>
+        <a className={linkClass("/glishoru/haus")} aria-current={pathname === "/glishoru/haus" ? "page" : undefined} href="/glishoru/haus">Unser Haus</a>
+        <a className={linkClass("/glishoru/speisekarte")} aria-current={pathname === "/glishoru/speisekarte" ? "page" : undefined} href="/glishoru/speisekarte">Speisekarte</a>
+        <a className={linkClass("/glishoru/kontakt")} aria-current={pathname === "/glishoru/kontakt" ? "page" : undefined} href="/glishoru/kontakt">Kontakt</a>
         <a className="gReserve" href={PHONE}>Tisch reservieren</a>
       </nav>
       <button className="gMenuButton" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label="Menü öffnen">{menuOpen ? "Schliessen" : "Menü"}</button>
