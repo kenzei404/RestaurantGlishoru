@@ -1,29 +1,9 @@
-"use client";
-
-import { useState } from "react";
-
-const PHONE = "tel:+41774947777";
+import { GlishoruFooter, GlishoruHeader, PHONE } from "./GlishoruShell";
 
 export default function GlishoruPage() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
     <main className="glishoru">
-      <header className="gNav">
-        <a className="gBrand" href="#top" aria-label="Glishoru Startseite">
-          <span>Restaurant</span>
-          <strong>Glishoru</strong>
-        </a>
-        <nav className={menuOpen ? "open" : ""} aria-label="Hauptnavigation">
-          <a href="#kueche" onClick={() => setMenuOpen(false)}>Küche</a>
-          <a href="#haus" onClick={() => setMenuOpen(false)}>Unser Haus</a>
-          <a href="#kontakt" onClick={() => setMenuOpen(false)}>Kontakt</a>
-          <a className="gReserve" href={PHONE}>Tisch reservieren</a>
-        </nav>
-        <button className="gMenuButton" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label="Menü öffnen">
-          {menuOpen ? "Schliessen" : "Menü"}
-        </button>
-      </header>
+      <GlishoruHeader overlay />
 
       <section className="gHero" id="top">
         <div className="gHeroImage" aria-hidden="true" />
@@ -34,7 +14,7 @@ export default function GlishoruPage() {
           <p className="gHeroLead">Persönliche Gastfreundschaft, ehrliche Zutaten und kreative Küche im Herzen des Oberwallis.</p>
           <div className="gHeroActions">
             <a className="gButton light" href={PHONE}>Tisch reservieren</a>
-            <a className="gTextLink" href="#kueche">Glishoru entdecken ↓</a>
+            <a className="gTextLink" href="/glishoru/speisekarte">Speisekarte entdecken →</a>
           </div>
         </div>
         <div className="gHeroMeta">
@@ -80,7 +60,7 @@ export default function GlishoruPage() {
           <p className="gSectionNo">02 · Unser Haus</p>
           <h2>Gastlichkeit,<br /><i>die von Herzen kommt.</i></h2>
           <p>Am Gliser Dorfplatz pflegen wir eine unkomplizierte, persönliche Art der Gastfreundschaft. Ein Ort für ein feines Essen zu zweit, das Wiedersehen mit Freunden oder einen langen Abend in guter Gesellschaft.</p>
-          <a className="gTextLink darkLink" href="#kontakt">Besuch planen ↓</a>
+          <a className="gTextLink darkLink" href="/glishoru/haus">Unser Haus entdecken →</a>
         </div>
         <div className="gWinePhoto" role="img" aria-label="Weinkeller des Restaurant Glishoru" />
       </section>
@@ -103,7 +83,7 @@ export default function GlishoruPage() {
         </div>
       </section>
 
-      <footer className="gFooter"><a className="gBrand" href="#top"><span>Restaurant</span><strong>Glishoru</strong></a><p>Tradition · Genuss · Gastfreundschaft</p><div><a href="https://www.instagram.com/restaurant_glishoru/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="https://www.facebook.com/restaurant.glishoru/" target="_blank" rel="noreferrer">Facebook ↗</a></div></footer>
+      <GlishoruFooter />
     </main>
   );
 }
