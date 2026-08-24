@@ -13,18 +13,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kenzo — Designer & Developer",
-  description: "Portfolio von Kenzo: Marken, Interfaces und digitale Erlebnisse aus der Schweiz.",
+  title: "Kenzo Kasper — Frontend Developer & Designer",
+  description: "Frontend Developer, Designer und Gründer von Minimalistica aus Glis, Schweiz.",
   openGraph: {
-    title: "Kenzo — Design & Code",
-    description: "Digitale Erlebnisse mit Haltung.",
+    title: "Kenzo Kasper — Form follows feeling",
+    description: "Independent creative based in Switzerland.",
     type: "website",
     images: [{ url: "/og.png", width: 1730, height: 910, alt: "Kenzo — Design & Code" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kenzo — Design & Code",
-    description: "Digitale Erlebnisse mit Haltung.",
+    title: "Kenzo Kasper — Form follows feeling",
+    description: "Independent creative based in Switzerland.",
     images: ["/og.png"],
   },
   icons: {
