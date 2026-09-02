@@ -13,19 +13,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kenzo Kasper — Frontend Developer & Designer",
-  description: "Frontend Developer, Designer und Gründer von Minimalistica aus Glis, Schweiz.",
+  title: "Restaurant Glishoru — Demo-Projekt",
+  description: "Traditionell-moderne Demo-Website für das Restaurant Glishoru in Glis.",
   openGraph: {
-    title: "Kenzo Kasper — Form follows feeling",
-    description: "Independent creative based in Switzerland.",
+    title: "Restaurant Glishoru — Demo-Projekt",
+    description: "Genuss im Herzen von Glis. Nicht die offizielle Website.",
     type: "website",
-    images: [{ url: "/og.png", width: 1730, height: 910, alt: "Kenzo — Design & Code" }],
+    images: [{ url: "/glishoru-og.png", width: 1200, height: 630, alt: "Restaurant Glishoru" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kenzo Kasper — Form follows feeling",
-    description: "Independent creative based in Switzerland.",
-    images: ["/og.png"],
+    title: "Restaurant Glishoru — Demo-Projekt",
+    description: "Genuss im Herzen von Glis. Nicht die offizielle Website.",
+    images: ["/glishoru-og.png"],
   },
   icons: {
     icon: "/favicon.svg",
