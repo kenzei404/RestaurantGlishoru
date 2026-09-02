@@ -10,16 +10,19 @@ export function GlishoruHeader({ overlay = false }: { overlay?: boolean }) {
   const pathname = usePathname();
   const linkClass = (href: string) => pathname === href ? "gNavActive" : undefined;
   return (
-    <header className="gNav" data-overlay={overlay || undefined}>
-      <a className="gBrand" href="/glishoru" aria-label="Glishoru Startseite"><span>Restaurant</span><strong>Glishoru</strong></a>
-      <nav className={menuOpen ? "open" : ""} aria-label="Hauptnavigation">
-        <a className={linkClass("/glishoru/haus")} aria-current={pathname === "/glishoru/haus" ? "page" : undefined} href="/glishoru/haus">Unser Haus</a>
-        <a className={linkClass("/glishoru/speisekarte")} aria-current={pathname === "/glishoru/speisekarte" ? "page" : undefined} href="/glishoru/speisekarte">Speisekarte</a>
-        <a className={linkClass("/glishoru/kontakt")} aria-current={pathname === "/glishoru/kontakt" ? "page" : undefined} href="/glishoru/kontakt">Kontakt</a>
-        <a className="gReserve" href={PHONE}>Tisch reservieren</a>
-      </nav>
-      <button className="gMenuButton" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label="Menü öffnen">{menuOpen ? "Schliessen" : "Menü"}</button>
-    </header>
+    <>
+      <aside className="gDemoBadge" aria-label="Hinweis: Dies ist ein Demo-Projekt"><strong>Demo-Projekt</strong><span>Nicht die offizielle Website</span></aside>
+      <header className="gNav" data-overlay={overlay || undefined}>
+        <a className="gBrand" href="/glishoru" aria-label="Glishoru Startseite"><span>Restaurant</span><strong>Glishoru</strong></a>
+        <nav className={menuOpen ? "open" : ""} aria-label="Hauptnavigation">
+          <a className={linkClass("/glishoru/haus")} aria-current={pathname === "/glishoru/haus" ? "page" : undefined} href="/glishoru/haus">Unser Haus</a>
+          <a className={linkClass("/glishoru/speisekarte")} aria-current={pathname === "/glishoru/speisekarte" ? "page" : undefined} href="/glishoru/speisekarte">Speisekarte</a>
+          <a className={linkClass("/glishoru/kontakt")} aria-current={pathname === "/glishoru/kontakt" ? "page" : undefined} href="/glishoru/kontakt">Kontakt</a>
+          <a className="gReserve" href={PHONE}>Tisch reservieren</a>
+        </nav>
+        <button className="gMenuButton" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label="Menü öffnen">{menuOpen ? "Schliessen" : "Menü"}</button>
+      </header>
+    </>
   );
 }
 

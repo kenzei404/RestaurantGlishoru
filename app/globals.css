@@ -117,6 +117,9 @@ h1 i { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 
 /* Glishoru */
 .glishoru { --wine: #401b1b; --cream: #f1eadb; --gold: #c7a66a; min-height: 100vh; background: var(--wine); color: var(--cream); font-family: Arial, Helvetica, sans-serif; }
+.gDemoBadge { position: fixed; z-index: 30; right: 20px; bottom: 20px; display: flex; flex-direction: column; gap: 3px; padding: 11px 14px; border: 1px solid rgba(241,234,219,.55); background: rgba(64,27,27,.94); color: var(--cream); box-shadow: 0 10px 30px rgba(20,5,5,.22); backdrop-filter: blur(8px); }
+.gDemoBadge strong { color: var(--gold); font-size: 9px; text-transform: uppercase; letter-spacing: .18em; }
+.gDemoBadge span { font-size: 10px; letter-spacing: .04em; }
 .gNav { position: absolute; z-index: 10; top: 0; left: 0; right: 0; height: 112px; padding: 0 4vw; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(241,234,219,.28); color: var(--cream); }
 .gBrand { display: flex; flex-direction: column; line-height: 1; }
 .gBrand span { margin-bottom: 5px; font-size: 9px; text-transform: uppercase; letter-spacing: .28em; }
@@ -183,6 +186,9 @@ h1 i { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 .gHouseBanner { min-height: 690px; display: grid; grid-template-columns: 1.3fr 1fr; background: #281011; color: var(--cream); }.gHouseBanner > div { background: url('https://www.glishoru.ch/img/Tavolata.png') center/cover; }.gHouseBanner > p { margin: 0; padding: 8vw; display: flex; flex-direction: column; justify-content: center; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(28px, 3.7vw, 55px); line-height: 1.2; }.gHouseBanner span { margin-top: 35px; font-family: Arial, sans-serif; font-size: 9px; text-transform: uppercase; letter-spacing: .16em; }
 .contactHero { min-height: 730px; background: #321415; }.gContactPage { padding: 12vh 7vw; display: grid; grid-template-columns: 1.2fr 1fr; gap: 10vw; }.gContactCards { border-top: 1px solid rgba(64,27,27,.35); }.gContactCards article { padding: 35px 0; border-bottom: 1px solid rgba(64,27,27,.35); }.gContactCards span { font-size: 9px; text-transform: uppercase; letter-spacing: .16em; }.gContactCards h2 { margin: 20px 0; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(34px, 4vw, 58px); font-weight: 400; }.gContactCards article > a { font-size: 10px; text-transform: uppercase; letter-spacing: .13em; }.gHours dl { margin: 30px 0; }.gHours dl div { padding: 14px 0; display: flex; justify-content: space-between; border-bottom: 1px solid rgba(64,27,27,.25); }.gHours dt, .gHours dd { margin: 0; }.gHours small { opacity: .7; }.gMapLink { min-height: 450px; padding: 5vw 7vw; display: flex; align-items: flex-end; justify-content: space-between; background: linear-gradient(rgba(30,8,8,.35),rgba(30,8,8,.7)), url('https://www.glishoru.ch/img/saal.jpg') center/cover; color: var(--cream); }.gMapLink p, .gMapLink a { margin: 0; font-size: 10px; text-transform: uppercase; letter-spacing: .15em; }.gMapLink a { padding-bottom: 5px; border-bottom: 1px solid; }
 @media (max-width: 720px) {
+  .gDemoBadge { right: 12px; bottom: 12px; padding: 9px 11px; }
+  .gDemoBadge strong { font-size: 8px; }
+  .gDemoBadge span { font-size: 9px; }
   .gNav { height: 86px; padding: 0 20px; }
   .gBrand strong { font-size: 26px; }
   .gNav nav { position: fixed; inset: 86px 0 auto; padding: 34px 20px; display: none; flex-direction: column; align-items: stretch; gap: 22px; background: var(--wine); }
